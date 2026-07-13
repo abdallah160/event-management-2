@@ -1,8 +1,8 @@
-export default function SideBar({ showForm }) {
+export default function SideBar({ formFunction }) {
     return (
         <>
             <h2>Your Projects</h2>
-            <button onClick={showForm}>Add a Project</button>
+            <button onClick={formFunction}>Add a Project</button>
 
         </>
     )

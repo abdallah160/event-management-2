@@ -10,7 +10,7 @@ function App() {
   }
   return (
     <>
-      <SideBar showForm={showForm} />
+      <SideBar formFunction={showForm} />
       <ProjectForm className={formClass} />
     </>
   );
