@@ -57,7 +57,7 @@ function App() {
   if (selectedProject == 0) {
     pageItem = <DefaultItem showCreateFun={showForm} />;
   } else if (selectedProject == 1) {
-    pageItem = <ProjectForm postFunction={handleCreateClick} />;
+    pageItem = <ProjectForm postFunction={handleCreateClick} showDefaultFun={showDefault} />;
   } else {
     for (let project of projects) {
       if (selectedProject == project.id) {

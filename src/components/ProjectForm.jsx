@@ -1,13 +1,13 @@
 import { useRef } from "react";
 
-export default function ProjectForm({ postFunction }) {
+export default function ProjectForm({ postFunction, showDefaultFun }) {
   let titleRef = useRef();
   let descriptionRef = useRef();
   let dateRef = useRef();
   return (
     <div>
       <div>
-        <button>Cancel</button>
+        <button onClick={showDefaultFun}>Cancel</button>
         <button
           onClick={() =>
             postFunction({
