@@ -1,20 +1,25 @@
-export default function ProjectForm({ className }) {
+import { useRef } from "react"
+
+export default function ProjectForm({ postFunction }) {
+    let titleRef = useRef();
+    let descriptionRef = useRef();
+    let dateRef = useRef();
     return (
 
-        <div className={className}>
+        <div>
             <div>
                 <button>Cancel</button>
-                <button>Create</button>
+                <button onClick={() => postFunction({ id: Date.now(), title: titleRef.current.value, description: descriptionRef.current.value, date: dateRef.current.value })}>Create</button>
             </div>
 
-            <label>Title</label>
-            <input type="text" />
+            <label >Title</label>
+            <input ref={titleRef} type="text" />
 
-            <label>Description</label>
-            <input type="text" />
+            <label >Description</label>
+            <input ref={descriptionRef} type="text" />
 
-            <label>Due Date</label>
-            <input type="date" />
+            <label >Due Date</label>
+            <input ref={dateRef} type="date" />
 
 
         </div>
